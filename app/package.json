@@ -15,8 +15,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.14.8",
-    "@ledgerhq/hw-transport-node-hid": "6.6.0"
+    "@babel/core": "^7.23.2",
+    "@ledgerhq/hw-transport-node-hid": "6.27.17"
   },
   "devDependencies": {
     "@babel/register": "^7.15.3"
