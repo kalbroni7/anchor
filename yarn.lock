@@ -1444,7 +1444,7 @@
     minimatch "^3.0.4"
     plist "^3.0.4"
 
-"@greymass/account-creation@0.0.2":
+"@greymass/account-creation@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@greymass/account-creation/-/account-creation-0.0.2.tgz#ed1d729aee0c1adc1c62dd311db3946aac234cff"
   integrity sha512-JWNs29FYV9OGPzOJ9U2NOzZDq1gX9fNjVdBW5mo/Ds83LGyRO51zvKyu8tTLu8my9MvhkTj+AqnQA/siYKrWPw==
@@ -1467,6 +1467,17 @@
     pako "^2.0.3"
     tslib "^2.3.0"
     uuid "^8.3.0"
+
+"@greymass/antelope-key-encryption@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@greymass/antelope-key-encryption/-/antelope-key-encryption-1.3.0.tgz#ec16943ded0609e3d04ec931e9ba126f5a357c13"
+  integrity sha512-OdYrBkHHiQFDnBifv0RFs5ypyS0e42x39mIcR8Y3CauVWv+IFokwhH6vLNeayVLPyxOLwRNcPBbALgVw7rl0/Q==
+  dependencies:
+    "@greymass/miniaes" "^1.0.0"
+    "@wharfkit/antelope" "^1.0.7"
+    asmcrypto.js "^2.3.2"
+    scrypt-js "^3.0.1"
+    tslib "^2.1.0"
 
 "@greymass/base2048@^1.0.0":
   version "1.0.0"
@@ -1514,38 +1525,27 @@
     hash.js "^1.0.0"
     tslib "^2.0.3"
 
-"@greymass/keycert-pdf@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@greymass/keycert-pdf/-/keycert-pdf-1.2.0.tgz#34bd1616e47929b4416cd1f912201a7e9cf79715"
-  integrity sha512-7nephD+3os7c6RuVp4oyH4olSreizSHGqc2Bh7MGzFDao++nHm6r17PfURPhDgqLtR5AVb5wb+9b19HxzD1UNg==
+"@greymass/keycert-pdf@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@greymass/keycert-pdf/-/keycert-pdf-1.4.0.tgz#0a52f97917c73b6bfb9773c811a1c4b5fe4aba38"
+  integrity sha512-Vm45Nbrqs7/oSsU2IFeLyigohiIy6gLtLcdqV2IxoxuRq4RQCINLoukgRLzMMyFKq04LiAY/nSbVf444Y/B8ow==
   dependencies:
-    "@greymass/eosio" "^0.5.0"
-    "@greymass/keycert" "^1.2.0"
+    "@greymass/keycert" "^1.5.0"
     "@pdf-lib/fontkit" "^1.1.1"
+    "@wharfkit/antelope" "^1.0.7"
     pdf-lib "^1.16.0"
     qr-svg "^1.1.0"
     tslib "^2.1.0"
 
-"@greymass/keycert@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@greymass/keycert/-/keycert-1.2.0.tgz#448974066718cb4619d5c2fb463138caeffecf47"
-  integrity sha512-BZE1C9geERMR1S+JID4j+mL1Rj16+b9C6x9Kh5T26K/b3366fmKhWZ7Q+lyVepPeN4ck2YRr4G17U3koIXcSsw==
+"@greymass/keycert@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@greymass/keycert/-/keycert-1.5.0.tgz#2a158fcb07015065eefc9af9146693b70a8d5c24"
+  integrity sha512-0ccPdHWr8O7QF88Wf1MTedr9du7DrH0XbZK3bqTcq4RYpHOP3p3T9AqSmIxjM2lK34WH+gdTowmyzCnpis+GhQ==
   dependencies:
+    "@greymass/antelope-key-encryption" "^1.3.0"
     "@greymass/base2048" "^1.0.0"
-    "@greymass/eosio" "^0.5.0"
-    eosio-key-encryption "^1.1.2"
-    eosio-signing-request "^2.1.0"
-    tslib "^2.1.0"
-
-"@greymass/keycert@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@greymass/keycert/-/keycert-1.4.0.tgz#62e4dbd692e72e96828bb1b9d74e4111d73de2e6"
-  integrity sha512-BB4ngrmaAqpnMQf+BJSKNxMc7wZeki/NCIwjaBp75N5vRINEd/29PSHucCW8pblTKRiGLuUQPvsCdh3ThmcZ9w==
-  dependencies:
-    "@greymass/base2048" "^1.0.0"
-    "@greymass/eosio" "^0.6.0"
-    eosio-key-encryption "^1.2.0"
-    eosio-signing-request "^2.5.0"
+    "@wharfkit/antelope" "^1.0.7"
+    "@wharfkit/signing-request" "^3.2.0"
     tslib "^2.1.0"
 
 "@greymass/miniaes@^1.0.0":
@@ -2444,6 +2444,26 @@
   resolved "https://registry.yarnpkg.com/@webpack-cli/serve/-/serve-1.5.1.tgz#b5fde2f0f79c1e120307c415a4c1d5eb15a6f278"
   integrity sha512-4vSVUiOPJLmr45S8rMGy7WDvpWxfFxfP/Qx/cxZFCfvoypTYpPPL1X8VIZMe0WTA+Jr7blUxwUSEZNkjoMTgSw==
 
+"@wharfkit/antelope@^1.0.7":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@wharfkit/antelope/-/antelope-1.0.12.tgz#e7b8e0e0805a7194fa62cacd3dfb662b18aa9962"
+  integrity sha512-Iuqog3rgnW+o8S+Etw5mMto14e1RILIDnRfZAvRS1DOVFgAma6Vv+rT9rJpJq7ldvTBdZu35BImkfwl0iDJCVw==
+  dependencies:
+    bn.js "^4.11.9"
+    brorand "^1.1.0"
+    elliptic "^6.5.4"
+    hash.js "^1.0.0"
+    pako "^2.1.0"
+    tslib "^2.0.3"
+
+"@wharfkit/signing-request@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@wharfkit/signing-request/-/signing-request-3.2.0.tgz#94cab97e27d1001973771056cfb9d54c02e45354"
+  integrity sha512-rIMzqwAKA5vb09+1BI+9fUXbj73JIkYcD1XT/Tom+k/+bqi51JcmC0trjCOjTUOK9UYDabpxYFixrf1ZvQymKw==
+  dependencies:
+    "@wharfkit/antelope" "^1.0.7"
+    tslib "^2.0.3"
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -2618,14 +2638,14 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
-anchor-link@^3.5.0:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/anchor-link/-/anchor-link-3.5.1.tgz#e7bff3ef6933881f332925767de5963dd2356c46"
-  integrity sha512-77hRmr1M8PwExXhTwKFrE2jXPq4AsfoUCqAgcQelD86TvEuDUrXgKNl1zfoAXLC8mIU3ZW+QdF7fieZQRrq7Kg==
+anchor-link@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/anchor-link/-/anchor-link-3.6.0.tgz#93aabfec8fd33c84021abb5d5f44ff75c196abd4"
+  integrity sha512-orXjgcJyg60rpWzGDuRRzQs4v1tOf0hRP1ERn+rTB5wdhujmhb3g9VDrvAKxdNVGPQQxAdT1U1XtJ0gXm3wQVw==
   dependencies:
-    "@greymass/eosio" "^0.6.0"
     "@greymass/miniaes" "^1.0.0"
-    eosio-signing-request "^2.5.0"
+    "@wharfkit/antelope" "^1.0.7"
+    "@wharfkit/signing-request" "^3.2.0"
     fetch-ponyfill "^7.1.0"
     isomorphic-ws "^4.0.1"
     pako "^2.0.3"
@@ -6258,28 +6278,7 @@ enzyme@^3.10.0:
     rst-selector-parser "^2.2.3"
     string.prototype.trim "^1.2.1"
 
-eosio-key-encryption@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/eosio-key-encryption/-/eosio-key-encryption-1.1.2.tgz#f1e1e1b57e904315f5e9df6adc6965dc2e782fb6"
-  integrity sha512-aEgT6dkCx194QPl3o0Dh2H5b4DkVrAwMCxWVpgPtWl+VsY7/ayyQPMf3wq5hy1P1OtJS6Z6uTrInQllmNF+efA==
-  dependencies:
-    "@greymass/eosio" "^0.5.0"
-    asmcrypto.js "^2.3.2"
-    scrypt-js "^3.0.1"
-    tslib "^2.1.0"
-
-eosio-key-encryption@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/eosio-key-encryption/-/eosio-key-encryption-1.2.0.tgz#3593fd775314768043fd9dae18962211c9e7aede"
-  integrity sha512-RGpAVgSbQbUMDqrDNAXd3h4aU81qNJJSZX2YeNEvIqiJz06TME5VQyYDzm8sL1MbJNt0u9BMS8pv/T8sxdAAvA==
-  dependencies:
-    "@greymass/eosio" "^0.6.0"
-    "@greymass/miniaes" "^1.0.0"
-    asmcrypto.js "^2.3.2"
-    scrypt-js "^3.0.1"
-    tslib "^2.1.0"
-
-eosio-signing-request@^2.1.0, eosio-signing-request@^2.2.2:
+eosio-signing-request@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/eosio-signing-request/-/eosio-signing-request-2.2.2.tgz#281cfe0843dc80205c89003d5638baf70fdcc449"
   integrity sha512-lxRBHYkk2rAnnZrFnTqweD1FLH3usL5oE24m3+1zNK2vJHRVlIyUk7tlUlmax78j8+FE54Po8LQCQ8TrCSSFGg==
@@ -6295,7 +6294,7 @@ eosio-signing-request@^2.3.1:
     "@greymass/eosio" "^0.5.0"
     tslib "^2.0.3"
 
-eosio-signing-request@^2.5.0, eosio-signing-request@^2.5.1:
+eosio-signing-request@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/eosio-signing-request/-/eosio-signing-request-2.5.1.tgz#2d33e4e6aeb747ea80cb1357b11ef77d1e2f18e6"
   integrity sha512-vA1jg118gSLJUmAs9FLDfrz+h2/sxt3lEKu19AO1lAzCgCB3Ib70VGfmFoLrty9Qzm1USTnn1EkogN780Ylq0Q==
@@ -11811,6 +11810,11 @@ pako@^2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pako/-/pako-2.0.4.tgz#6cebc4bbb0b6c73b0d5b8d7e8476e2b2fbea576d"
   integrity sha512-v8tweI900AUkZN6heMU/4Uy4cXRc2AYNRggVmTR+dEncawDJgCdLMximOVA2p4qO57WMynangsfGRb5WD6L1Bg==
+
+pako@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/pako/-/pako-2.1.0.tgz#266cc37f98c7d883545d11335c00fbd4062c9a86"
+  integrity sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug==
 
 paralleljs@^0.2.1:
   version "0.2.1"
